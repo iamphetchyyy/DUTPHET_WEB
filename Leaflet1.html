@@ -1,0 +1,168 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>My first Leaflet</title>
+
+<!-- inline css -->
+<!-- body style="background-color: #FFFDDE;"-->
+
+<!-- internal css -->
+<!-- <style >
+  body {background-color:
+#FFFDDE;}
+h1{color: #BB6464; }
+</style> -->
+
+<!-- external css -->
+<link rel="stylesheet" href="css\style.css">
+
+<!-- Link leaflet css and javascript-->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+
+</head>
+<body>
+  <strong><font color="#BB6464" size= "5"><center><h1><em>5 most popular places in the Netherlands</em></h1></center></font></strong>
+  <center><p><font color="#1572A1" size= "2">Amsterdam - Netherlands</font></p></center>
+  <center><p><font color="#1572A1" size= "2">by Dutphet K.</font></p></center>
+  <hr size = "2" noshade><br>
+
+  <!-- divide map bounding box -->
+  <center><div id="map" style="width: 800px; height: 600px"></div></center>
+  <!-- set center and link map -->
+<script>
+
+  var map = L.map('map').setView([52.374499110702544, 4.86790489526324],15);
+
+  mapLink ='<a href="http://openstreetmap.org">iamphetchyyy</a>';
+
+  L.tileLayer(
+    'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; ' + mapLink,
+    maxZoom: 18,
+}).addTo(map);
+
+var greenIcon1 = L.icon({
+  iconUrl: 'https://leafletjs.com/SlavaUkraini/examples/custom-icons/leaf-green.png',
+  shadowUrl: 'https://leafletjs.com/SlavaUkraini/examples/custom-icons/leaf-shadow.png',
+
+  iconSize: [38, 95], // size of the icon
+  shadowSize: [50, 64], // size of the shadow
+  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+  shadowAnchor: [4, 62], // the same for the shadow
+  popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var marker = L.marker([52.3693626434301, 4.901215918638009],
+      {
+       icon: greenIcon1,
+       draggable:true,
+       title: 'Rembrandt House',
+       opacity:1.5
+      }
+)
+   .addTo(map)
+   .bindPopup("<b>Rembrandt House Museum</b>")
+   .openPopup();
+
+var greenIcon2 = L.icon({
+  iconUrl: 'https://leafletjs.com/SlavaUkraini/examples/custom-icons/leaf-green.png',
+  shadowUrl: 'https://leafletjs.com/SlavaUkraini/examples/custom-icons/leaf-shadow.png',
+
+  iconSize: [38, 95], // size of the icon
+  shadowSize: [50, 64], // size of the shadow
+  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+  shadowAnchor: [4, 62], // the same for the shadow
+  popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var marker = L.marker([52.373763297584624, 4.912292800945396],
+      {
+       icon: greenIcon2,
+       draggable:true,
+       title: 'Nemo Science',
+       opacity:1.5
+      }
+  )
+    .addTo(map)
+    .bindPopup("<b>Nemo Science Museum</b>")
+    .openPopup();
+
+var greenIcon3 = L.icon({
+  iconUrl: 'https://leafletjs.com/SlavaUkraini/examples/custom-icons/leaf-green.png',
+  shadowUrl: 'https://leafletjs.com/SlavaUkraini/examples/custom-icons/leaf-shadow.png',
+
+  iconSize: [38, 95], // size of the icon
+  shadowSize: [50, 64], // size of the shadow
+  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+  shadowAnchor: [4, 62], // the same for the shadow
+  popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var marker = L.marker([52.37284198413162, 4.891358115925546],
+      {
+        icon: greenIcon3,
+        draggable:true,
+        title: 'Amsterdam',
+        opacity:1.5
+      }
+  )
+    .addTo(map)
+    .bindPopup("<b>Royal Palace Amsterdam</b>")
+    .openPopup();
+
+var greenIcon4 = L.icon({
+  iconUrl: 'https://leafletjs.com/SlavaUkraini/examples/custom-icons/leaf-green.png',
+  shadowUrl: 'https://leafletjs.com/SlavaUkraini/examples/custom-icons/leaf-shadow.png',
+
+  iconSize: [38, 95], // size of the icon
+  shadowSize: [50, 64], // size of the shadow
+  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+  shadowAnchor: [4, 62], // the same for the shadow
+  popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var marker = L.marker([52.366674441897395, 4.908232310692843],
+      {
+       icon: greenIcon4,
+        draggable:true,
+        title: 'Hortus Botanicus',
+        opacity:1.5
+      }
+  )
+    .addTo(map)
+    .bindPopup("<b>Hortus Botanicus Amsterdam</b>")
+    .openPopup();
+
+var greenIcon5 = L.icon({
+  iconUrl: 'https://leafletjs.com/SlavaUkraini/examples/custom-icons/leaf-green.png',
+  shadowUrl: 'https://leafletjs.com/SlavaUkraini/examples/custom-icons/leaf-shadow.png',
+
+  iconSize: [38, 95], // size of the icon
+  shadowSize: [50, 64], // size of the shadow
+  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+  shadowAnchor: [4, 62], // the same for the shadow
+  popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var marker = L.marker([52.37148910133118, 4.912656106981071],
+      {
+        icon: greenIcon5,
+        draggable:true,
+        title: 'ARCAM',
+        opacity:1.5
+      }
+  )
+    .addTo(map)
+    .bindPopup("<b>ARCAM Architecture Centre Amsterdam</b>")
+    .openPopup();
+</script>
+
+<br><hr size = "2" noshade>
+
+<br><br><center><p>💖 THANK YOU 🙏</p></center><br>
+
+</body>
+</html>
